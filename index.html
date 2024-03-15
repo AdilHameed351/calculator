@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-row">
+            <div class="top-row-left">
+                <button class="undo">Undo</button>
+            </div>
+            <div class="top-row-center">
+                <div class="basic-container">
+                    <button class="basic">Basic <i class="fa-solid  fa-chevron-down"></i></button>
+                    <div class="basic-dropdown">
+                        <div class="basic-radio">
+                            <label for="basic"><span>Basic</span> <input type="radio" name="basic-items" id="basic"
+                                    checked></label>
+                        </div>
+                        <div class="advanced-radio">
+                            <label for="advanced"><span>Advanced</span> <input type="radio" name="basic-items"
+                                    id="advanced"></label>
+                        </div>
+                        <div class="financial-radio">
+                            <label for="financial"><span>Financial</span> <input type="radio" name="basic-items"
+                                    id="financial"></label>
+                        </div>
+                        <div class="programming-radio">
+                            <label for="programming"><span>Programming</span> <input type="radio" name="basic-items"
+                                    id="programming"></label>
+                        </div>
+                        <div class="keyboard-radio">
+                            <label for="keyboard"><span>Keyboard</span> <input type="radio" name="basic-items"
+                                    id="keyboard"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="three-lines-container">
+                    <button class="three-lines"><i class="fa-sharp fa-solid fa-bars"></i></button>
+                    <div class="three-lines-dropdown">
+                        <div class="new-window">
+                            <p>New Window</p>
+                        </div>
+                        <hr>
+                        <div class="number-format">
+                            <p>Number format</p>
+                        </div>
+                        <div class="automatic-radio">
+                            <label for="automatic"><span>Automatic</span> <input type="radio" name="calculator-type"
+                                    id="automatic" checked></label>
+                        </div>
+                        <div class="fixed-radio">
+                            <label for="fixed"><span>Fixed</span> <input type="radio" name="calculator-type"
+                                    id="fixed"></label>
+                        </div>
+                        <div class="scientific-radio">
+                            <label for="scientific"><span>Scientific</span> <input type="radio" name="calculator-type"
+                                    id="scientific"></label>
+                        </div>
+                        <div class="engineering-radio">
+                            <label for="engineering"><span>Engineering</span> <input type="radio" name="calculator-type"
+                                    id="engineering"></label>
+                        </div>
+                        <hr>
+                        <div class="preferences">
+                            <p>Preferences</p>
+                        </div>
+                        <div class="keyboard-shortcuts">
+                            <p>Keyboard Shortcuts</p>
+                        </div>
+                        <div class="help">
+                            <p>Help</p>
+                        </div>
+                        <div class="about-calculator">
+                            <p>About Calculator</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="top-row-right">
+                <button class="minimize"><i class="fa-sharp fa-solid fa-window-minimize"></i></button>
+                <button class="full-screen-in-out"><i class="fa-sharp fa-regular fa-square"></i></button>
+                <button class="cross"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="history-box">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="first-row"><span>127+90+321+673+... = </span> <span class="second-span">1455</span></div>
+            <div class="second-row"><span>38+690+212+81+167 = </span> <span class="second-span">1188</span>
+            </div>
+        </div>
+        <div class="output-field">
+            <input type="text" value="38+690+212+81+167" class="output-field-input">
+        </div>
+        <div class="buttons-box">
+            <div class="buttons-first-row">
+                <button class="del" onclick="delBtn()"><i class="fa-sharp fa-regular fa-circle-xmark"></i></button>
+                <button class="lpar" onclick="valueInInputField('(')">&lpar;</button>
+                <button class="rpar" onclick="valueInInputField(')')">&rpar;</button>
+                <button class="mod" onclick="valueInInputField(' mod ')">mod</button>
+                <button class="pi" onclick="valueInInputField('π')">π</button>
+            </div>
+            <div class="buttons-second-row">
+                <button class="num seven" onclick="valueInInputField('7')">7</button>
+                <button class="num eight" onclick="valueInInputField('8')">8</button>
+                <button class="num nine" onclick="valueInInputField('9')">9</button>
+                <button class="divide" onclick="valueInInputField('÷')">÷</button>
+                <button class="sqr" onclick="valueInInputField('√')">√</button>
+            </div>
+            <div class="buttons-third-row">
+                <button class="num four" onclick="valueInInputField('4')">4</button>
+                <button class="num five" onclick="valueInInputField('5')">5</button>
+                <button class="num six" onclick="valueInInputField('6')">6</button>
+                <button class="multiply" onclick="valueInInputField('×')">×</button>
+                <button class="square" onclick="valueInInputField('²')">x²</button>
+            </div>
+            <div class="buttons-fourth-and-fifth-rows">
+                <div class="left-side">
+                    <div class="left-side-first-row">
+                        <button class="num one" onclick="valueInInputField('1')">1</button>
+                        <button class="num two" onclick="valueInInputField('2')">2</button>
+                        <button class="num three" onclick="valueInInputField('3')">3</button>
+                        <button class="minus" onclick="valueInInputField('-')">-</button>
+                    </div>
+                    <div class="left-side-second-row">
+                        <button class="num zero" onclick="valueInInputField('0')">0</button>
+                        <button class="decimal" onclick="valueInInputField('.')">.</button>
+                        <button class="percentage" onclick="valueInInputField('%')">%</button>
+                        <button class="plus" onclick="valueInInputField('+')">+</button>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <button class="action-button">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

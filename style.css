@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 340px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.top-row {
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border: 1px solid gray;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.undo {
+    width: 70px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 15px;
+}
+
+.undo:hover {
+    background-color: rgb(250, 250, 250);
+}
+
+.top-row-center {
+    display: flex;
+}
+
+.basic-container {
+    position: relative;
+    margin-right: 10px;
+}
+
+.basic {
+    width: 80px;
+    height: 30px;
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.basic:hover {
+    border: 1px solid rgb(172, 172, 172);
+    background-color: rgb(245, 245, 245);
+}
+
+.basic i {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.basic-dropdown {
+    border: 1px solid rgb(150, 150, 150);
+    position: absolute;
+    top: 50px;
+    left: -40px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: none;
+}
+
+.basic-dropdown::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    position: absolute;
+    top: -9px;
+    left: 70px;
+    transform: rotate(45deg);
+    border-top: 1px solid rgb(150, 150, 150);
+    border-left: 1px solid rgb(150, 150, 150);
+}
+
+.basic-radio,
+.advanced-radio,
+.financial-radio,
+.programming-radio,
+.keyboard-radio {
+    width: 140px;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    color: rgb(50, 50, 50);
+}
+
+.basic-radio:hover,
+.advanced-radio:hover,
+.financial-radio:hover,
+.programming-radio:hover,
+.keyboard-radio:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+.basic-radio {
+    border: 2px solid rgb(254, 85, 23);
+}
+
+.basic-radio label,
+.advanced-radio label,
+.financial-radio label,
+.programming-radio label,
+.keyboard-radio label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.basic-radio label input,
+.advanced-radio label input,
+.financial-radio label input,
+.programming-radio label input,
+.keyboard-radio label input {
+    width: 15px;
+    height: 15px;
+}
+
+.three-lines-container {
+    position: relative;
+}
+
+.three-lines {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 5px;
+    position: rel
+}
+
+.three-lines:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.three-lines-dropdown {
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: -65px;
+    display: none;
+}
+
+.three-lines-dropdown::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    position: absolute;
+    top: -9px;
+    left: 70px;
+    transform: rotate(45deg);
+    border-top: 1px solid rgb(150, 150, 150);
+    border-left: 1px solid rgb(150, 150, 150);
+}
+
+.new-window,
+.number-format,
+.automatic-radio,
+.fixed-radio,
+.scientific-radio,
+.engineering-radio,
+.preferences,
+.keyboard-shortcuts,
+.help,
+.about-calculator {
+    width: 140px;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    color: rgb(50, 50, 50);
+}
+
+.new-window {
+    margin-bottom: 5px;
+}
+
+.number-format {
+    color: rgb(130, 130, 130);
+    margin-top: 5px;
+}
+
+.automatic-radio {
+    border: 2px solid rgb(254, 85, 23);
+}
+
+.engineering-radio {
+    margin-bottom: 5px;
+}
+
+.preferences {
+    margin-top: 5px;
+}
+
+.new-window:hover,
+.number-format:hover,
+.automatic-radio:hover,
+.fixed-radio:hover,
+.scientific-radio:hover,
+.engineering-radio:hover,
+.preferences:hover,
+.keyboard-shortcuts:hover,
+.help:hover,
+.about-calculator:hover {
+    background-color: rgb(220, 220, 220);
+    cursor: default;
+}
+
+.number-format:hover {
+    background-color: transparent;
+}
+
+
+.automatic-radio label,
+.fixed-radio label,
+.scientific-radio label,
+.engineering-radio label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.automatic-radio label input,
+.fixed-radio label input,
+.scientific-radio label input,
+.engineering-radio label input {
+    width: 15px;
+    height: 15px;
+}
+
+.minimize,
+.full-screen-in-out,
+.cross {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(220, 220, 220);
+}
+
+.minimize:hover,
+.full-screen-in-out:hover,
+.cross:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.minimize i,
+.full-screen-in-out i,
+.cross i {
+    font-size: 10px;
+}
+
+.history-box {
+    padding: 5px;
+    letter-spacing: 1px;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid gray;
+    border-bottom: none;
+}
+
+.history-box .first-row,
+.history-box .second-row {
+    margin-bottom: 5px;
+}
+
+.history-box .first-row .second-span,
+.history-box .second-row .second-span {
+    font-weight: 700;
+    margin-left: 50px;
+}
+
+.output-field {
+    border: 1px solid gray;
+    border-bottom: none;
+}
+
+.output-field input {
+    padding: 10px 10px 30px 10px;
+    width: 100%;
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+
+.buttons-box {
+    padding: 10px;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid gray;
+    border-radius: 0 0 10px 10px;
+}
+
+.buttons-box button {
+    font-size: 16px;
+    color: rgb(60, 60, 60);
+}
+
+.buttons-first-row,
+.buttons-second-row,
+.buttons-third-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0;
+}
+
+.buttons-first-row button,
+.buttons-second-row button,
+.buttons-third-row button {
+    width: 60px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.buttons-first-row button:hover,
+.buttons-second-row button:hover,
+.buttons-third-row button:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.buttons-first-row .del {
+    background-color: rgb(216, 4, 4, 0.9);
+    color: #fff;
+}
+
+.buttons-first-row .del:hover {
+    background-color: rgb(216, 4, 4, 1);
+}
+
+.buttons-box .num {
+    font-weight: 900;
+}
+
+.buttons-fourth-and-fifth-rows  {
+    display: flex;
+}
+
+.buttons-fourth-and-fifth-rows .left-side {
+    flex: 1;
+}
+
+.left-side .left-side-first-row,
+.left-side .left-side-second-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0;
+}
+
+.left-side .left-side-first-row button,
+.left-side .left-side-second-row button {
+    width: 60px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.left-side .left-side-first-row button:hover,
+.left-side .left-side-second-row button:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.buttons-fourth-and-fifth-rows .right-side {
+    margin-left: 6px;
+}
+
+.buttons-fourth-and-fifth-rows .right-side button{
+    width: 60px;
+    height: 85px;
+    background-color: rgb(1, 150, 1);
+    margin-top: 3px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 158, 0);
+    color: #fff;
+}
+
+.buttons-fourth-and-fifth-rows .right-side button:hover {
+    background-color: rgb(0, 196, 0);
+}
